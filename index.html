@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GATE CSE Preparation</title>
+  <style>
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f2f4f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 2.5rem;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #333;
+      margin-bottom: 3rem;
+    }
+
+    .subject-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .subject {
+      background-color: #4caf50;
+      color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .subject:hover {
+      background-color: #388e3c;
+      transform: translateY(-5px);
+    }
+
+    .subject h3 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    .subject p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #ddd;
+      line-height: 1.4;
+    }
+
+    .subject a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      background-color: #ff4081;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 1.5rem;
+    }
+
+    .subject a:hover {
+      background-color: #f50057;
+    }
+
+    .coming-soon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ff5722;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    .subject-dbms {
+      background-color: #4caf50; /* DBMS - Available */
+    }
+
+    .subject-dbms a {
+      background-color: #00796b; /* Darker shade for DBMS */
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 2rem;
+        padding: 1.5rem;
+      }
+
+      .subject-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+
+      .subject h3 {
+        font-size: 1.6rem;
+      }
+
+      .subject p {
+        font-size: 0.9rem;
+      }
+
+      .subject a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GATE CSE Preparation</h1>
+    <p>Explore subjects to boost your preparation!</p>
+  </header>
+
+  <div class="container">
+    <h2>Select a Subject</h2>
+    <div class="subject-list">
+      <div class="subject subject-dbms">
+        <h3>Databases (DBMS)</h3>
+        <p>Study relational models, SQL, indexing, and transaction management to design effective databases.</p>
+        <a href="DBMS.html">Go to Databases</a>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Engineering Maths</h3>
+        <p>Study topics like Discrete Mathematics, Linear Algebra, Calculus, Probability, and Statistics to strengthen your foundation.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Digital Logic</h3>
+        <p>Master Boolean algebra, combinational circuits, and computer arithmetic.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Computer Organization</h3>
+        <p>Understand machine instructions, ALU, control units, memory hierarchy, and I/O systems.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Programming</h3>
+        <p>Learn C programming, recursion, and data structures like arrays, stacks, queues, and linked lists.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Algorithms</h3>
+        <p>Focus on searching, sorting, hashing, and the design of algorithms using dynamic programming and divide-and-conquer.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Theory of Computation</h3>
+        <p>Learn about finite automata, context-free grammars, Turing machines, and undecidability.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Compiler Design</h3>
+        <p>Explore lexical analysis, parsing, syntax-directed translation, and optimization techniques.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Operating System</h3>
+        <p>Understand processes, memory management, file systems, CPU scheduling, and inter-process communication.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+      <div class="subject" onclick="comingSoon()">
+        <h3>Computer Networks</h3>
+        <p>Learn about network protocols, IP addressing, transport layers, and application protocols like DNS, HTTP, and FTP.</p>
+        <div class="coming-soon">Coming Soon</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 GATE CSE Preparation. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to show "Coming Soon" alert
+    function comingSoon() {
+      alert("This subject is coming soon!");
+    }
+  </script>
+</body>
+</html>
